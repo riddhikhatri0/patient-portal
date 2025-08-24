@@ -1,0 +1,114 @@
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #5f6368;
+  --light-color: #f8f9fa;
+  --dark-color: #202124;
+  --danger-color: #d93025;
+  --background-color: #f1f3f4;
+  --card-background: #ffffff;
+  --text-color: #3c4043;
+  --border-color: #dadce0;
+  --box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.container { max-width: 1100px; margin: 2rem auto; overflow: hidden; padding: 0 2rem; }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card-background);
+  color: var(--text-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.navbar a { color: var(--secondary-color); text-decoration: none; font-weight: 500; }
+.navbar h1 a { color: var(--dark-color); font-size: 1.5rem; }
+.navbar ul { display: flex; list-style: none; }
+.navbar li { margin-left: 1.5rem; }
+.navbar a:hover { color: var(--primary-color); }
+.page-container, .form-container {
+  background: var(--card-background);
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+h2, h3 { color: var(--dark-color); margin-bottom: 1rem; font-weight: 400; }
+.form-container form { display: grid; gap: 1rem; }
+.form-container label { font-weight: 500; margin-bottom: -0.5rem; font-size: 0.9rem;}
+input, select, textarea, button { font-family: inherit; font-size: 1rem; }
+input[type='text'], input[type='email'], input[type='password'],
+input[type='tel'], input[type='date'], select, textarea {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+.btn {
+  display: inline-block;
+  color: var(--primary-color);
+  padding: 0.8rem 2rem;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.btn:hover { background: rgba(26, 115, 232, 0.05); }
+.btn-primary { background: var(--primary-color); color: #fff; border-color: var(--primary-color);}
+.btn-primary:hover { background: #185abc; }
+.btn-secondary { background: var(--secondary-color); color: #fff; border-color: var(--secondary-color); }
+.btn-danger { background: var(--danger-color); color: #fff; margin-left: 1rem; border-color: var(--danger-color);}
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+.patient-info p { margin-bottom: 0.5rem; }
+.patient-info strong { color: var(--secondary-color); }
+.qr-code img { border: 1px solid var(--border-color); padding: 1rem; width: 250px; height: 250px;}
+.patient-list { list-style: none; padding: 0; }
+.patient-list li {
+  background: #fff;
+  margin-bottom: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.2s ease-in-out;
+}
+.patient-list li:hover { box-shadow: var(--box-shadow); }
+.patient-link { display: flex; justify-content: space-between; align-items: center; width: 100%; text-decoration: none; color: inherit; padding: 1rem; }
+.file-list .file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+.file-list .file-item:hover { background-color: var(--light-color); }
+.file-list a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
+.file-list span { color: var(--secondary-color); font-size: 0.9rem; }
+.login-prompt {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--light-color);
+  border-radius: 4px;
+  margin-top: 1rem;
+}
